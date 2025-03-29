@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- System packages to preinstall on AOSPA, per user type.
+     Documentation at frameworks/base/data/etc/preinstalled-packages-platform.xml
+-->
+<config>
+    <!--  Xiaomi Parts  -->
+    <install-in-user-type package="org.lineageos.settings">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+</config>

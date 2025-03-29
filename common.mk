@@ -377,6 +377,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
+# Preinstalled packages
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/preinstalled-packages-xiaomi.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-xiaomi.xml
+
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
