@@ -293,6 +293,24 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.lmk.upgrade_pressure=40 \
     ro.lmk.use_minfree_levels=true
 
+# Logging
+SPAMMY_LOG_TAGS := \
+    SDM \
+    SDM-histogram \
+    SRE \
+    WifiHAL \
+    cnss-daemon \
+    sensors \
+    sensors-hal \
+    vendor.qti.bluetooth@1.0-ibs_handler \
+    vendor.qti.bluetooth@1.0-wake_lock \
+    vendor.qti.hardware.display.composer-service
+
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_VENDOR_PROPERTIES += \
+    $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=E)
+endif
+
 # Media
 MSM_VIDC_TARGET_LIST := bengal
 
